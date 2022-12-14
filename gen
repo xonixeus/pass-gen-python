@@ -1,0 +1,31 @@
+import random
+import string
+
+def generate_password(length: int) -> str:
+  # Get all the printable ASCII characters
+  #chars = string.printable
+  # Define specific ASCII characters (e.g., alphabetic, numerical, and symbols) to use
+  alpha = "abcdefghjkmnpqrstuvwxyz"
+  ALPHA = "ABCDEFGHJKMNPQRSTUVWXYZ"
+  NUM = "0123456789"
+  SYM = "@#$&"
+
+  # Combine the diferent ASCII characters into one variable "chars"
+  chars = "".join([alpha,ALPHA,NUM,SYM])
+
+  # Use random.choices to generate a list of 'length' random characters from 'chars'
+  password = random.choices(chars, k=length)
+
+  # Convert the list of characters to a string and return it
+  return "".join(password)
+
+# Example: generate a 16-character password
+#password = generate_password(16)
+
+# Prompt the user for the length of the string
+length = int(input("Length (default: 18) of the password? ") or "18")
+
+#print(password)
+# Generate and print the random string
+password = generate_password(length)
+print(password)
