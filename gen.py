@@ -3,7 +3,9 @@ import secrets
 
 # Define usable characters
 alpha = "abcdefghjkmnpqrstuvwxyz"
+# Excluded the characters: ijo
 ALPHA = "ABCDEFGHJKMNPQRSTUVWXYZ"
+# Excluded the characters: IJLO
 NUM = "0123456789"
 SYM = "@#$&"
 
