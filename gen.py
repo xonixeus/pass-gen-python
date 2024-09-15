@@ -1,8 +1,6 @@
 import random
 import secrets
 
-# A new note!
-
 # Define usable characters
 alpha = "abcdefghjkmnpqrstuvwxyz"
 # Excluded the characters: ijlo
